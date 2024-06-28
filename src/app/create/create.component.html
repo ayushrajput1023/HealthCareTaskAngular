@@ -1,0 +1,33 @@
+
+<div class="container">
+    <h3>Add New Employee</h3>
+    <br>
+    <form class="form-group" (ngSubmit)="onSubmit(a)" #a="ngForm">
+        <label for="">Enter Employee Name : </label>
+        <input class="form-control" type="text" 
+        placeholder="Please Enter Employee Name" required ngModel name="employeeName">
+        <br>
+        <label for="">Enter Date Of Birth : </label>
+        <input class="form-control" type="datetime" 
+        placeholder="Please Enter Date Of Birth" required ngModel name="employeeDOB">
+        <br>
+        <label for="">Enter Employee Gender : </label>
+        <input class="form-control" type="text" 
+        placeholder="Please Enter Employee Gender" required ngModel name="employeeGender">
+        <br>
+        <label for="">Enter Employee Department : </label>
+        <input class="form-control" type="text" 
+        placeholder="Please Enter Employee Department" required ngModel name="employeeDepartment">
+        <br>
+        <label for="">Enter Employee Designation : </label>
+        <input class="form-control" type="text" 
+        placeholder="Please Enter Employee Designation" required ngModel name="employeeDesignation">
+        <br>
+        <label for="">Enter Employee BasicSalary : </label>
+        <input class="form-control" type="text" 
+        placeholder="Please Enter Employee BasicSalary" required ngModel name="employeeBasicSalary">
+        <br><br><br>
+        <button type="button" class="btn btn-gray" (click)="onBack()" >Back</button>
+        <button class="btn btn-primary" [disabled]="a.invalid">Add</button>
+    </form>
+</div>

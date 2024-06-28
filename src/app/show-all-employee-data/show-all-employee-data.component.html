@@ -1,0 +1,40 @@
+
+<div class="container">
+    <div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"><div>Employee</div><div>Code</div></th>
+                <th scope="col"><div>Employee</div><div>Name</div></th>
+                <th scope="col"><div>Date Of</div><div>Birth</div></th>
+                <th scope="col">Gender</th>
+                <th scope="col">Department</th>
+                <th scope="col">Designation</th>
+                <th scope="col"> <div>Basic</div><div>Salary</div></th>
+                <th scope="col"><div>Dearness</div><div>Allowance</div></th>
+                <th scope="col"><div>Conveyance</div><div>Allowance</div></th>
+                <th scope="col"><div>House Rent</div><div>Allowance</div></th>
+                <th scope="col"><div>Total</div><div>Salary</div></th>
+              </tr>
+            </thead>
+            <tbody>
+                @for (item of allEmployee; track item.employeeCode) {
+                  <tr>
+                    <td>{{ item.employeeCode }}</td>
+                    <td>{{ item.employeeName }}</td>
+                    <td>{{ item.dateOfBirth }}</td>
+                    <td>{{ item.gender }}</td>
+                    <td>{{ item.department }}</td>
+                    <td>{{ item.designation }}</td>
+                    <td>{{ item.basicSalary }}</td>
+                    <td>{{ item.dearnessAllowance }}</td>
+                    <td>{{ item.conveyanceAllowance }}</td>
+                    <td>{{ item.houseRentAllowance }}</td>
+                    <td>{{ item.totalSalary }}</td>
+                    <td><a href="" routerLink="/update" routerLinkActive="router-link-active" >Edit</a></td>
+                  </tr>
+                }
+            </tbody>
+          </table>
+    </div>
+</div>

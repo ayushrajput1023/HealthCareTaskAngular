@@ -1,0 +1,17 @@
+
+<div class="container">
+    <h3>Update Employee Name</h3>
+    <br>
+    <form class="form-group" (ngSubmit)="onSubmit(a)" #a="ngForm">
+        <label for="">Enter Employee Code : </label>
+        <input class="form-control" type=number 
+        placeholder="Please Enter Employee Code" required ngModel name="employeeCode">
+        <br>
+        <label for="">Enter Employee New Name : </label>
+        <input class="form-control" type="text" 
+        placeholder="Please Enter Employee New Name" required ngModel name="employeeNewName">
+        <br><br><br>
+        <button type="button" class="btn btn-gray" (click)="onBack()" >Back</button>
+        <button class="btn btn-primary" [disabled]="a.invalid">Update</button>
+    </form>
+</div>
